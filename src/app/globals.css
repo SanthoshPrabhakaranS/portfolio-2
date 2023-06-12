@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair:wght@600;700;800;900&display=swap");
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 0.99rem;
+  line-height: 2rem;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Mobile screen */
+@media only screen and (max-width: 768px) {
+  *,
+  body {
+    line-height: 2rem;
+  }
+}
+
+.bg {
+  background-attachment: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: #f3f3f3;
+  background-image: linear-gradient(
+      to right,
+      rgba(223, 223, 223, 0.6) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(223, 223, 223, 0.6) 1px, transparent 1px);
+  background-size: 100px 100px;
+}
+
+.bg::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    80deg,
+    hsla(0, 0%, 100%, 0.236) 0%,
+    hsla(221, 80%, 96%, 0.235) 10%,
+    hsla(220, 80%, 92%, 0.412) 22%,
+    hsla(220, 80%, 88%, 0.491) 35%,
+    hsla(221, 80%, 86%, 0.291) 46%,
+    hsla(230, 67%, 88%, 0.241) 57%,
+    hsla(244, 54%, 89%, 0.388) 66%,
+    hsla(270, 46%, 89%, 0.364) 75%,
+    hsla(280, 39%, 91%, 0.357) 82%,
+    hsla(282, 42%, 94%, 0.219) 89%,
+    hsla(280, 37%, 97%, 0.213) 95%,
+    hsla(0, 0%, 100%, 0.231) 100%
+  );
+  z-index: -2;
+}
+
+.outer-circle {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.5px solid #adadad;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  opacity: 1;
+  z-index: -1;
+}
+
+.cursor {
+  background-color: #adadad;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* For mobile phones: */
+@media only screen and (max-width: 768px) {
+  .outer-circle {
+    display: none;
+  }
+
+  .cursor {
+    display: none;
+  }
+}
+
+/* GLITCH EFFECT */
+.stack {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.stack span {
+  overflow-y: hidden;
+  font-weight: bold;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  font-size: 3rem;
+  /* --stack-height: calc(100% / var(--stacks) - 1px); */
+  --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+  --clip-top: calc(var(--stack-height) * var(--index));
+  --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+  clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+  animation: stack 340ms cubic-bezier(0.46, 0.29, 0, 1.24) 1 backwards
+      calc(var(--index) * 120ms),
+    glitch 2s ease infinite 2s alternate-reverse;
+}
+
+.stack span:nth-child(odd) {
+  --glitch-translate: 8px;
+}
+.stack span:nth-child(even) {
+  --glitch-translate: -8px;
+}
+
+/* Mobile screens */
+@media only screen and (max-width: 768px) {
+  .stack span {
+    font-size: 2.3rem;
+    line-height: 2.2rem;
+  }
+}
+
+@keyframes stack {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+  }
+  60% {
+    opacity: 0.5;
+    transform: translateX(50%);
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+    transform: translate(var(--glitch-translate));
+  }
+  2% {
+    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+  }
+  4%,
+  100% {
+    text-shadow: none;
+    transform: none;
+  }
+}
