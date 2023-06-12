@@ -44,8 +44,8 @@ const NavBar = () => {
       {/* Mobile screens */}
       <motion.ul
         className={`text-paragraph ${
-          toggleMenu ? "flex" : "hidden"
-        } md:hidden flex-col gap-5 fixed bg-white top-0 left-0 z-50 w-full h-screen items-center pt-[6rem]`}
+          toggleMenu ? "opacity-100" : "opacity-0"
+        } md:hidden flex flex-col gap-5 fixed bg-white top-0 left-0 z-50 w-full h-screen items-center pt-[6rem] transition-all duration-500`}
       >
         {navItems.map((item, idx) => {
           return (
@@ -54,7 +54,7 @@ const NavBar = () => {
               href={`/${item.toLowerCase()}`}
               className="cursor-pointer hover:border-b border-paragraph text-[1.1rem] px-2"
             >
-              {item}
+              <span onClick={_toggleMenu}>{item}</span>
             </Link>
           );
         })}

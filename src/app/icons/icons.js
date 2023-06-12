@@ -20,11 +20,14 @@ export const Link = <BsLink45Deg size={20} />;
 export const socialMediaItems = [
   {
     name: Linkedin,
+    link: "www.linkedin.com/in/-santhosh-dev"
   },
   {
     name: Github,
+    link: "https://github.com/SanthoshPrabhakaranS"
   },
   {
     name: Instagram,
+    link: "https://www.instagram.com/_the_.santhosh/"
   },
 ];

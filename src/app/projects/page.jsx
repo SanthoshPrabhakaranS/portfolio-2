@@ -3,9 +3,10 @@ import NextPageNavigation from "@/shared/NextPageNavigation";
 import SocialMediaLinks from "@/shared/SocialMediaLinks";
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Link, socialMediaItems } from "../icons/icons";
+import { Link as Url, socialMediaItems } from "../icons/icons";
 import { projectsItems } from "./projectData";
 import Image from "next/image";
+import Link from "next/link";
 
 const Projects = () => {
   return (
@@ -31,7 +32,7 @@ const Projects = () => {
                 <div className="h-full w-full max-w-[500px] rounded-lg absolute top-0 bottom-0 flex flex-col gap-1 justify-end p-4 px-5 group-hover:opacity-100 opacity-0 bg-opacity-40 bg-gradient-to-t from-black to-white/50 transition-all duration-500">
                   <h1 className="text-[1.4rem] font-[1000] text-white flex items-center gap-1">
                     {item.title}
-                    <a href={item.link}>{Link}</a>
+                    <a href={item.link}>{Url}</a>
                   </h1>
                   <p className="text-[.9rem] text-gray-100">{item.desc}</p>
                   <span className="flex flex-row gap-2 flex-wrap">
@@ -64,12 +65,13 @@ const Projects = () => {
           <div className="flex flex-row gap-3 items-center">
             {socialMediaItems.map((item, idx) => {
               return (
-                <span
-                  key={idx}
-                  className="cursor-pointer hover:scale-110 transition-all duration-500 text-paragraph"
-                >
-                  {item.name}
-                </span>
+                <Link
+              href={`/${item.link}`}
+                key={idx}
+                className="cursor-pointer hover:scale-110 transition-all duration-500 text-paragraph"
+              >
+                {item.name}
+              </Link>
               );
             })}
           </div>

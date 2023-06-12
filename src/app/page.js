@@ -47,18 +47,23 @@ export default function Home() {
           me a line, just like Spider-Man swinging from skyscrapers.{" "}
         </p>
         <NextPageNavigation title={"See More About Me"} path={"about"} />
-        <div className="flex flex-row gap-3 items-center">
-      {socialMediaItems.map((item, idx) => {
-        return (
-          <span
-            key={idx}
-            className="cursor-pointer hover:scale-110 transition-all duration-500 text-paragraph"
-          >
-            {item.name}
-          </span>
-        );
-      })}
-    </div>
+        <div className="flex flex-row gap-3 items-center pb-3">
+          {socialMediaItems.map((item, idx) => {
+            return (
+              <a
+                href={item.link}
+                key={idx}
+                className="cursor-pointer hover:scale-110 transition-all duration-500 text-paragraph"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(item.link, "_self");
+                }}
+              >
+                {item.name}
+              </a>
+            );
+          })}
+        </div>
       </div>
       <div className="text-[18rem] font-[1000] opacity-[.02] -z-[1] font-Arbiral overflow-visible fixed bottom-[15%] left-0 whitespace-nowrap">
         <h1>Sp.</h1>
