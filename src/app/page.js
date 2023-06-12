@@ -17,7 +17,7 @@ export default function Home() {
     >
       <div className="stack" style={{ "--stacks": 1 }}>
         <span style={{ "--index": 0, padding: "10px 0" }}>
-          I'm Santhosh Prabhakaran
+          I&apos;m Santhosh Prabhakaran
         </span>
       </div>
       <div className="flex flex-col gap-5 text-paragraph">
@@ -26,7 +26,7 @@ export default function Home() {
           engineer. I am driven by a sense of responsibility and a desire to
           make a positive impact with my web development skills, I craft dynamic
           and visually stunning applications that captivate users, much like
-          Spider-Man's acrobatic maneuvers.
+          Spider-Man&apos;s acrobatic maneuvers.
         </p>
         <p className="text-[.9rem] md:text-[1rem]">
           Every day, I spin my web of innovative{" "}
