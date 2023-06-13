@@ -32,9 +32,8 @@ const NavBar = () => {
       <ul className="text-paragraph hidden md:flex flex-row gap-5">
         {navItems.map((item, idx) => {
           return (
-            <div className="flex flex-col group">
+            <div key={idx} className="flex flex-col group">
               <Link
-                key={idx}
                 href={`/${item.toLowerCase()}`}
                 className={`cursor-pointer transition text-[.97rem] px-2 ${
                   pathName.includes(item.toLowerCase()) ? "hidden" : null
