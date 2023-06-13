@@ -15,7 +15,7 @@ const NavBar = () => {
     setToggleMenu(!toggleMenu);
   };
   return (
-    <nav className="max-w-[1150px] mx-auto flex flex-row items-center justify-between p-3 mt-6 md:mt-8 font-Poppins">
+    <nav className="max-w-[1150px] mx-auto flex flex-row items-center justify-between p-3 mt-6 md:mt-8">
       <Link href={"/"}>
         <Image
           src={Logo}
@@ -54,7 +54,12 @@ const NavBar = () => {
               href={`/${item.toLowerCase()}`}
               className="cursor-pointer hover:border-b border-paragraph text-[1.1rem] px-2"
             >
-              <span onClick={_toggleMenu}>{item}</span>
+              <span
+                style={{ fontFamily: "noi_grotesk_trialblack" }}
+                onClick={_toggleMenu}
+              >
+                {item}
+              </span>
             </Link>
           );
         })}

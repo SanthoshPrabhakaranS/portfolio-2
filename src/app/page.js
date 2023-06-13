@@ -13,10 +13,10 @@ export default function Home() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
       transition={{ duration: 0.8 }}
-      className="h-full w-full flex flex-col gap-5 mt-5 font-Poppins"
+      className="h-full w-full flex flex-col gap-5 mt-5"
     >
       <div className="stack" style={{ "--stacks": 1 }}>
-        <span style={{ "--index": 0, padding: "10px 0" }}>
+        <span style={{ "--index": 0, padding: "10px 0", fontFamily: "noi_grotesk_trialblack" }}>
           I&apos;m Santhosh Prabhakaran
         </span>
       </div>
@@ -56,7 +56,12 @@ export default function Home() {
                 className="cursor-pointer hover:scale-110 transition-all duration-500 text-paragraph"
                 onClick={(e) => {
                   e.preventDefault();
-                  window.open(item.link, "_self");
+                  const link =
+                    item.link.startsWith("http://") ||
+                    item.link.startsWith("https://")
+                      ? item.link
+                      : `http://${item.link}`;
+                  window.open(link, "_self");
                 }}
               >
                 {item.name}
@@ -65,8 +70,8 @@ export default function Home() {
           })}
         </div>
       </div>
-      <div className="text-[18rem] font-[1000] opacity-[.02] -z-[1] font-Arbiral overflow-visible fixed bottom-[15%] left-0 whitespace-nowrap">
-        <h1>Sp.</h1>
+      <div className="text-[18rem] opacity-[.02] -z-[1] font-Arbiral overflow-visible fixed bottom-[15%] left-0 whitespace-nowrap">
+        <h1 style={{fontFamily: "noi_grotesk_trialblack"}}>Sp.</h1>
       </div>
     </motion.main>
   );

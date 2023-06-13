@@ -13,9 +13,9 @@ const About = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
       transition={{ duration: 0.8 }}
-      className="mt-[2.5rem] flex flex-col gap-[5rem] pb-[1rem] font-Poppins"
+      className="mt-[2.5rem] flex flex-col gap-[5rem] pb-[1rem]"
     >
-      <h1 className="text-[2.6rem] md:text-[3.3rem] font-[1000]">About Me.</h1>
+      <h1 style={{fontFamily: "noi_grotesk_trialblack"}} className="text-[2.6rem] md:text-[3.3rem] font-[1000]">About Me.</h1>
       <div className="border-l border-gray-300 px-3 flex flex-col gap-[3rem]">
         <div className="relative">
           <span className="absolute left-[-24px] top-2 bg-gray-100 rounded-full">
@@ -23,7 +23,10 @@ const About = () => {
           </span>
           <h1 className="text-[1rem] md:text-[1.1rem] font-semibold flex flex-col md:flex-row w-full justify-start md:justify-between items-start">
             Myself
-            <Link href={"/projects"} className="text-[.8rem] md:text-[.9rem] cursor-pointer underline italic">
+            <Link
+              href={"/projects"}
+              className="text-[.8rem] md:text-[.9rem] cursor-pointer underline italic"
+            >
               View Resume
             </Link>
           </h1>
@@ -46,7 +49,10 @@ const About = () => {
           </span>
           <h1 className="text-[1rem] md:text-[1.1rem] font-semibold flex flex-col md:flex-row w-full justify-start md:justify-between items-start">
             Engineering
-            <Link href={"/projects"} className="text-[.8rem] md:text-[.9rem] cursor-pointer underline italic">
+            <Link
+              href={"/projects"}
+              className="text-[.8rem] md:text-[.9rem] cursor-pointer underline italic"
+            >
               View Projects
             </Link>
           </h1>
@@ -108,12 +114,22 @@ const About = () => {
         <div className="flex flex-row gap-3 items-center">
           {socialMediaItems.map((item, idx) => {
             return (
-              <span
+              <a
+                href={item.link}
                 key={idx}
                 className="cursor-pointer hover:scale-110 transition-all duration-500 text-paragraph"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const link =
+                    item.link.startsWith("http://") ||
+                    item.link.startsWith("https://")
+                      ? item.link
+                      : `http://${item.link}`;
+                  window.open(link, "_self");
+                }}
               >
                 {item.name}
-              </span>
+              </a>
             );
           })}
         </div>

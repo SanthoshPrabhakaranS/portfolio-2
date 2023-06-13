@@ -35,9 +35,9 @@ const Contact = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
       transition={{ duration: 0.8 }}
-      className="mt-[2.5rem] flex flex-col gap-[3rem] pb-[1rem] font-Poppins"
+      className="mt-[2.5rem] flex flex-col gap-[3rem] pb-[1rem]"
     >
-      <h1 className="text-[2.6rem] md:text-[3.3rem] font-[1000]">Contact.</h1>
+      <h1 style={{fontFamily: "noi_grotesk_trialblack"}} className="text-[2.6rem] md:text-[3.3rem] font-[1000]">Contact.</h1>
       <div>
         <p className="text-paragraph text-[.9rem] md:text-[.95rem]">
           Get in touch or shoot me an email directly on{" "}
@@ -84,18 +84,28 @@ const Contact = () => {
         <div className="flex flex-row gap-3 items-center">
           {socialMediaItems.map((item, idx) => {
             return (
-              <span
+              <a
+                href={item.link}
                 key={idx}
                 className="cursor-pointer hover:scale-110 transition-all duration-500 text-paragraph"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const link =
+                    item.link.startsWith("http://") ||
+                    item.link.startsWith("https://")
+                      ? item.link
+                      : `http://${item.link}`;
+                  window.open(link, "_self");
+                }}
               >
                 {item.name}
-              </span>
+              </a>
             );
           })}
         </div>
       </div>
       <div className="text-[14rem] font-[1000] opacity-[.02] -z-[1] font-Arbiral overflow-visible fixed bottom-[15%] left-0 whitespace-nowrap">
-        <h1>Contact.</h1>
+        <h1 style={{fontFamily: "noi_grotesk_trialblack"}}>Contact.</h1>
       </div>
     </motion.div>
   );

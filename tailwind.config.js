@@ -26,7 +26,6 @@ module.exports = {
         xl: "1440px",
       },
       fontFamily: {
-        Poppins: ['Poppins', "sans-serif"],
         Arbiral: ["Abril Fatface", "cursive"],
       },
     },

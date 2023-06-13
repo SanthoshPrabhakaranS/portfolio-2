@@ -12,10 +12,29 @@ body {
   font-size: 0.99rem;
   line-height: 2rem;
   scroll-behavior: smooth;
+  font-family: "noi_grotesk";
 }
 
 ::-webkit-scrollbar {
   width: 0;
+}
+
+/* Light font */
+@font-face {
+  font-family: "noi_grotesk";
+  src: url("./assets/noigrotesktrial-regular-webfont.woff2") format("woff2"),
+    url("./assets//noigrotesktrial-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Bold font */
+@font-face {
+  font-family: "noi_grotesk_trialblack";
+  src: url("./assets/noigrotesktrial-black-webfont.woff2") format("woff2"),
+    url("./assets/noigrotesktrial-black-webfont.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
 }
 
 /* Mobile screen */
