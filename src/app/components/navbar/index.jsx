@@ -23,28 +23,36 @@ const NavBar = () => {
           className=" h-[70px] w-[70px] md:h-[90px] md:w-[90px] cursor-pointer"
         />
       </Link>
-      <div onClick={_toggleMenu} className="flex md:hidden">
+      <div
+        className="flex md:hidden cursor-pointer"
+        onClick={() => setToggleMenu(true)}
+      >
         {Menu}
       </div>
       <ul className="text-paragraph hidden md:flex flex-row gap-5">
         {navItems.map((item, idx) => {
           return (
-            <Link
-              key={idx}
-              href={`/${item.toLowerCase()}`}
-              className={`cursor-pointer hover:border-b border-paragraph transition text-[.97rem] px-2 ${
-                pathName.includes(item.toLowerCase()) ? "hidden" : null
-              }`}
-            >
-              {item}
-            </Link>
+            <div className="flex flex-col group">
+              <Link
+                key={idx}
+                href={`/${item.toLowerCase()}`}
+                className={`cursor-pointer transition text-[.97rem] px-2 ${
+                  pathName.includes(item.toLowerCase()) ? "hidden" : null
+                }`}
+              >
+                {item}
+              </Link>
+              <span className="h-[1px] w-0 bg-gray-400 opacity-0 group-hover:w-full group-hover:opacity-100 transition-all duration-500"></span>
+            </div>
           );
         })}
       </ul>
+
       {/* Mobile screens */}
+
       <motion.ul
         className={`text-paragraph ${
-          toggleMenu ? "opacity-100" : "opacity-0"
+          toggleMenu ? "opacity-100" : "hidden"
         } md:hidden flex flex-col gap-5 fixed bg-white top-0 left-0 z-50 w-full h-screen items-center pt-[6rem] transition-all duration-500`}
       >
         {navItems.map((item, idx) => {
@@ -63,7 +71,10 @@ const NavBar = () => {
             </Link>
           );
         })}
-        <span onClick={_toggleMenu} className="absolute top-10 right-8">
+        <span
+          onClick={_toggleMenu}
+          className="absolute top-10 right-8 col-span-2 cursor-pointer"
+        >
           {Cancel}
         </span>
       </motion.ul>
