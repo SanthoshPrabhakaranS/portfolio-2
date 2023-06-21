@@ -3,6 +3,7 @@ import Img2 from "../assets/project1.png";
 import Img3 from "../assets/project3.png";
 import Img4 from "../assets/project4.png";
 import Img5 from "../assets/project5.png";
+import Img6 from "../assets/project6.png";
 
 export const projectsItems = [
   {
@@ -50,5 +51,13 @@ export const projectsItems = [
     desc: "Blogging site to post your thoughts.",
     technologies: ["ReactJS", "Tailwind CSS", "ExpressJS", "MongoDB"],
     link: "https://gentle-pithivier-00d078.netlify.app/"
+  },
+  {
+    id: 6,
+    url: Img6,
+    title: "Chat application",
+    desc: "Group chat application.",
+    technologies: ["ReactJS", "Tailwind CSS", "Firebase", "Universal cookies"],
+    link: "https://chat-app-ffced.web.app/"
   },
 ];
