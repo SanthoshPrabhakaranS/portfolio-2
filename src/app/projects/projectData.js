@@ -4,6 +4,7 @@ import Img3 from "../assets/project3.png";
 import Img4 from "../assets/project4.png";
 import Img5 from "../assets/project5.png";
 import Img6 from "../assets/project6.png";
+import Img7 from "../assets/project7.png";
 
 export const projectsItems = [
   {
@@ -59,5 +60,13 @@ export const projectsItems = [
     desc: "Group chat application.",
     technologies: ["ReactJS", "Tailwind CSS", "Firebase", "Universal cookies"],
     link: "https://chat-app-ffced.web.app/"
+  },
+  {
+    id: 7,
+    url: Img7,
+    title: "Cloud Storage application",
+    desc: "Cloud storage application to store your files.",
+    technologies: ["Next JS", "Tailwind CSS", "Firebase", "NextAuth.js", "Zustand"],
+    link: "https://cloud-storage-mu.vercel.app/signup"
   },
 ];
