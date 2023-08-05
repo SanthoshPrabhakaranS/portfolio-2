@@ -15,7 +15,12 @@ const About = () => {
       transition={{ duration: 0.8 }}
       className="mt-[2.5rem] flex flex-col gap-[5rem] pb-[1rem]"
     >
-      <h1 style={{fontFamily: "noi_grotesk_trialblack"}} className="text-[2.6rem] md:text-[3.3rem] font-[1000]">About Me.</h1>
+      <h1
+        style={{ fontFamily: "noi_grotesk_trialblack" }}
+        className="text-[2.6rem] md:text-[3.3rem] font-[1000]"
+      >
+        About Me.
+      </h1>
       <div className="border-l border-gray-300 px-3 flex flex-col gap-[3rem]">
         <div className="relative">
           <span className="absolute left-[-24px] top-2 bg-gray-100 rounded-full">
@@ -24,8 +29,10 @@ const About = () => {
           <h1 className="text-[1rem] md:text-[1.1rem] font-semibold flex flex-col md:flex-row w-full justify-start md:justify-between items-start">
             Myself
             <Link
-              href={"/projects"}
-              className="text-[.8rem] md:text-[.9rem] cursor-pointer underline italic"
+              href={
+                "https://drive.google.com/file/d/1kayELBiEzA5qG0tAsv-KUzkMkaSBSgOm/view?usp=sharing"
+              }
+              className="text-[.8rem] md:text-[.9rem] cursor-pointer underline"
             >
               View Resume
             </Link>
@@ -51,7 +58,7 @@ const About = () => {
             Engineering
             <Link
               href={"/projects"}
-              className="text-[.8rem] md:text-[.9rem] cursor-pointer underline italic"
+              className="text-[.8rem] md:text-[.9rem] cursor-pointer underline"
             >
               View Projects
             </Link>
@@ -93,7 +100,9 @@ const About = () => {
               <h1 className="underline text-[.9rem] md:text-[.95rem]">
                 Back-end technologies
               </h1>
-              <p className="text-[.95rem]">NodeJS, ExpressJS, MongoDB</p>
+              <p className="text-[.95rem]">
+                NodeJS, ExpressJS, MongoDB, Firebase
+              </p>
             </li>
             <li className="flex flex-col">
               <h1 className="underline text-[.9rem] md:text-[.95rem]">
