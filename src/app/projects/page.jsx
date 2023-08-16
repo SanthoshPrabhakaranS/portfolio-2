@@ -17,7 +17,10 @@ const Projects = () => {
         transition={{ duration: 0.8 }}
         className="mt-[2.5rem] flex flex-col gap-[5rem] pb-[1rem]"
       >
-        <h1 style={{fontFamily: "noi_grotesk_trialblack"}} className="text-[2.6rem] md:text-[3.3rem] font-[1000]">
+        <h1
+          style={{ fontFamily: "noi_grotesk_trialblack" }}
+          className="text-[2.6rem] md:text-[3.3rem] font-[1000]"
+        >
           Projects.
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.5rem]">
@@ -59,33 +62,35 @@ const Projects = () => {
         <div className="flex flex-col gap-2">
           <NextPageNavigation
             title={"Let's Go To My Resume"}
-            path={"projects"}
+            path={
+              "https://drive.google.com/file/d/1kayELBiEzA5qG0tAsv-KUzkMkaSBSgOm/view?usp=sharing"
+            }
           />
           <div className="flex flex-row gap-3 items-center">
             {socialMediaItems.map((item, idx) => {
               return (
                 <a
-                href={item.link}
-                key={idx}
-                className="cursor-pointer hover:scale-110 transition-all duration-500 text-paragraph"
-                onClick={(e) => {
-                  e.preventDefault();
-                  const link =
-                    item.link.startsWith("http://") ||
-                    item.link.startsWith("https://")
-                      ? item.link
-                      : `http://${item.link}`;
-                  window.open(link, "_self");
-                }}
-              >
-                {item.name}
-              </a>
+                  href={item.link}
+                  key={idx}
+                  className="cursor-pointer hover:scale-110 transition-all duration-500 text-paragraph"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const link =
+                      item.link.startsWith("http://") ||
+                      item.link.startsWith("https://")
+                        ? item.link
+                        : `http://${item.link}`;
+                    window.open(link, "_self");
+                  }}
+                >
+                  {item.name}
+                </a>
               );
             })}
           </div>
         </div>
         <div className="text-[18rem] font-[1000] opacity-[.02] -z-[1] font-Arbiral overflow-visible fixed bottom-[15%] left-0 whitespace-nowrap">
-          <h1 style={{fontFamily: "noi_grotesk_trialblack"}}>Projects.</h1>
+          <h1 style={{ fontFamily: "noi_grotesk_trialblack" }}>Projects.</h1>
         </div>
       </motion.div>
     </AnimatePresence>

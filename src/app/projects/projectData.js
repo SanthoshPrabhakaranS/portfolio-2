@@ -5,6 +5,7 @@ import Img4 from "../assets/project4.png";
 import Img5 from "../assets/project5.png";
 import Img6 from "../assets/project6.png";
 import Img7 from "../assets/project7.png";
+import Img8 from "../assets/project8.png";
 
 export const projectsItems = [
   {
@@ -19,7 +20,7 @@ export const projectsItems = [
       "ExpressJS",
       "MongoDB",
     ],
-    link:"https://shopieeee.vercel.app/"
+    link: "https://shopieeee.vercel.app/",
   },
   {
     id: 2,
@@ -27,7 +28,7 @@ export const projectsItems = [
     title: "Santhosh.dev",
     desc: "Previous portfolio to showcase myself.",
     technologies: ["ReactJS", "Material UI", "Framer Motion"],
-    link: "https://santhoshprabhakarans.github.io/portfolio/"
+    link: "https://santhoshprabhakarans.github.io/portfolio/",
   },
   {
     id: 3,
@@ -35,7 +36,7 @@ export const projectsItems = [
     title: "Aequalis",
     desc: "Web application to add and maintian users.",
     technologies: ["ReactJS", "Material UI", "Redux Toolkit"],
-    link: "https://santhoshprabhakarans.github.io/crud-application/"
+    link: "https://santhoshprabhakarans.github.io/crud-application/",
   },
   {
     id: 4,
@@ -43,30 +44,52 @@ export const projectsItems = [
     title: "Hangman",
     desc: "Game application using english words.",
     technologies: ["ReactJS", "TypeScript"],
-    link: "https://santhoshprabhakarans.github.io/hang-man-game/"
+    link: "https://santhoshprabhakarans.github.io/hang-man-game/",
   },
   {
     id: 5,
     url: Img5,
-    title: "Blog-site",
+    title: "Blog-site Application",
     desc: "Blogging site to post your thoughts.",
     technologies: ["ReactJS", "Tailwind CSS", "ExpressJS", "MongoDB"],
-    link: "https://gentle-pithivier-00d078.netlify.app/"
+    link: "https://gentle-pithivier-00d078.netlify.app/",
   },
   {
     id: 6,
     url: Img6,
-    title: "Chat application",
+    title: "Chat Application",
     desc: "Group chat application.",
     technologies: ["ReactJS", "Tailwind CSS", "Firebase", "Universal cookies"],
-    link: "https://chat-app-ffced.web.app/"
+    link: "https://chat-app-ffced.web.app/",
   },
   {
     id: 7,
     url: Img7,
-    title: "Cloud Storage application",
+    title: "Cloud Storage Application",
     desc: "Cloud storage application to store your files.",
-    technologies: ["Next JS", "Tailwind CSS", "Firebase", "NextAuth.js", "Zustand"],
-    link: "https://cloud-storage-mu.vercel.app/signup"
+    technologies: [
+      "Next JS",
+      "Tailwind CSS",
+      "Zustand",
+      "Firebase",
+      "NextAuth.js",
+    ],
+    link: "https://cloud-storage-mu.vercel.app/signup",
+  },
+  {
+    id: 8,
+    url: Img8,
+    title: "Real Estate Application",
+    desc: "Real estate application to check and book properties.",
+    technologies: [
+      "React JS",
+      "Material UI",
+      "Zustand",
+      "Node JS",
+      "Express JS",
+      "Prisma",
+      "Mongo DB",
+    ],
+    link: "https://real-estate-site-url.vercel.app/",
   },
 ];
