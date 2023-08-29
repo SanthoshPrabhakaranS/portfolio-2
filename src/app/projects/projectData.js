@@ -6,6 +6,7 @@ import Img5 from "../assets/project5.png";
 import Img6 from "../assets/project6.png";
 import Img7 from "../assets/project7.png";
 import Img8 from "../assets/project8.png";
+import Img9 from "../assets/project9.png";
 
 export const projectsItems = [
   {
@@ -91,5 +92,19 @@ export const projectsItems = [
       "Mongo DB",
     ],
     link: "https://real-estate-site-url.vercel.app/",
+  },
+  {
+    id: 9,
+    url: Img9,
+    title: "Airbnb clone",
+    desc: "Airbnb clone to create and book reservations and properties.",
+    technologies: [
+      "NextJS",
+      "Tailwind CSS",
+      "Prisma",
+      "Mongo DB",
+      "NextAuth.js",
+    ],
+    link: "https://air-bnb-clone-sooty-three.vercel.app/",
   },
 ];
