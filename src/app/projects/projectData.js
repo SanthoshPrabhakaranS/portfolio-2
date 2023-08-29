@@ -100,6 +100,7 @@ export const projectsItems = [
     desc: "Airbnb clone to create and book reservations and properties.",
     technologies: [
       "NextJS",
+      "TypeScript",
       "Tailwind CSS",
       "Prisma",
       "Mongo DB",
