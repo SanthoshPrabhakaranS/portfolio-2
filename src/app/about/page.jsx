@@ -30,7 +30,7 @@ const About = () => {
             Myself
             <Link
               href={
-                "https://drive.google.com/file/d/1kayELBiEzA5qG0tAsv-KUzkMkaSBSgOm/view?usp=sharing"
+                "https://drive.google.com/file/d/12SrbKQdJJrZxXwZL0OXcvg3cq2rN897T/view?usp=drive_link"
               }
               className="text-[.8rem] md:text-[.9rem] cursor-pointer underline"
             >

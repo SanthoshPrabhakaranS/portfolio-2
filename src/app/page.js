@@ -16,7 +16,13 @@ export default function Home() {
       className="h-full w-full flex flex-col gap-5 mt-5"
     >
       <div className="stack" style={{ "--stacks": 1 }}>
-        <span style={{ "--index": 0, padding: "10px 0", fontFamily: "noi_grotesk_trialblack" }}>
+        <span
+          style={{
+            "--index": 0,
+            padding: "10px 0",
+            fontFamily: "noi_grotesk_trialblack",
+          }}
+        >
           I&apos;m Santhosh Prabhakaran
         </span>
       </div>
@@ -71,7 +77,7 @@ export default function Home() {
         </div>
       </div>
       <div className="text-[18rem] opacity-[.02] -z-[1] font-Arbiral overflow-visible fixed bottom-[15%] left-0 whitespace-nowrap">
-        <h1 style={{fontFamily: "noi_grotesk_trialblack"}}>Sp.</h1>
+        <h1 style={{ fontFamily: "noi_grotesk_trialblack" }}>Sp.</h1>
       </div>
     </motion.main>
   );

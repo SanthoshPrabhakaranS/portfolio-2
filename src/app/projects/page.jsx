@@ -63,7 +63,7 @@ const Projects = () => {
           <NextPageNavigation
             title={"Let's Go To My Resume"}
             path={
-              "https://drive.google.com/file/d/1kayELBiEzA5qG0tAsv-KUzkMkaSBSgOm/view?usp=sharing"
+              "https://drive.google.com/file/d/12SrbKQdJJrZxXwZL0OXcvg3cq2rN897T/view?usp=drive_link"
             }
           />
           <div className="flex flex-row gap-3 items-center">
