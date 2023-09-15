@@ -7,6 +7,8 @@ import Img6 from "../assets/project6.png";
 import Img7 from "../assets/project7.png";
 import Img8 from "../assets/project8.png";
 import Img9 from "../assets/project9.png";
+import Img10 from "../assets/project10.png";
+import Img11 from "../assets/project11.png";
 
 export const projectsItems = [
   {
@@ -52,7 +54,14 @@ export const projectsItems = [
     url: Img5,
     title: "Blog-site Application",
     desc: "Blogging site to post your articles.",
-    technologies: ["NextJS", "Tailwind CSS", "Prisma", "MongoDB", "NextAuthJS", "React Query"],
+    technologies: [
+      "NextJS",
+      "Tailwind CSS",
+      "Prisma",
+      "MongoDB",
+      "NextAuthJS",
+      "React Query",
+    ],
     link: "https://blog-a9jwavsue-santhoshprabhakarans.vercel.app/",
   },
   {
@@ -108,5 +117,29 @@ export const projectsItems = [
       "NextAuth.js",
     ],
     link: "https://air-bnb-clone-sooty-three.vercel.app/",
+  },
+  {
+    id: 10,
+    url: Img10,
+    title: "Ecommerce-Dashboard Application",
+    desc: "Admin Dashboard to manage products for E-commerce stores.",
+    technologies: [
+      "NextJS",
+      "TypeScript",
+      "Tailwind CSS",
+      "Prisma",
+      "MySQL",
+      "React Query",
+      "Clerk.js",
+    ],
+    link: "https://e-commerce-admin-dun.vercel.app/",
+  },
+  {
+    id: 11,
+    url: Img11,
+    title: "Ecommerce Store Application",
+    desc: "E-commerce store to purchase fashionable products.",
+    technologies: ["NextJS", "TypeScript", "Tailwind CSS"],
+    link: "https://e-commerce-store-ten-mauve.vercel.app/",
   },
 ];
