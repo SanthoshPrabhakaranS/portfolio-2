@@ -132,7 +132,7 @@ export const projectsItems = [
       "React Query",
       "Clerk.js",
     ],
-    link: "https://e-commerce-admin-dun.vercel.app/",
+    link: "https://e-commerce-admin02.vercel.app/",
   },
   {
     id: 11,
