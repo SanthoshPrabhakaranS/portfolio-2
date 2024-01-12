@@ -9,6 +9,7 @@ import Img8 from "../assets/project8.png";
 import Img9 from "../assets/project9.png";
 import Img10 from "../assets/project10.png";
 import Img11 from "../assets/project11.png";
+import Img12 from "../assets/project12.png";
 
 export const projectsItems = [
   {
@@ -141,5 +142,13 @@ export const projectsItems = [
     desc: "E-commerce store to purchase fashionable products.",
     technologies: ["NextJS", "TypeScript", "Tailwind CSS"],
     link: "https://e-commerce-store-ten-mauve.vercel.app/",
+  },
+  {
+    id: 12,
+    url: Img12,
+    title: "Authentication Application",
+    desc: "Auth application using Next-auth v5 with client and server actions.",
+    technologies: ["NextJS 14.0", "TypeScript", "Tailwind CSS", "Next-auth v5"],
+    link: "https://next-auth-v5-26tr-p742udv9q-santhoshprabhakarans.vercel.app/",
   },
 ];
