@@ -34,7 +34,7 @@ const Projects = () => {
                 <div className="h-full w-full max-w-[500px] rounded-lg absolute top-0 bottom-0 flex flex-col gap-1 justify-end p-4 px-5 group-hover:opacity-100 opacity-0 bg-opacity-40 bg-gradient-to-t from-black to-white/50 transition-all duration-500">
                   <h1 className="text-[1.4rem] font-[1000] text-white flex items-center gap-1">
                     {item.title}
-                    <a href={item.link}>{Url}</a>
+                    <a href={item.link} target="_blank">{Url}</a>
                   </h1>
                   <p className="text-[.9rem] text-gray-100">{item.desc}</p>
                   <span className="flex flex-row gap-2 flex-wrap">
@@ -80,7 +80,7 @@ const Projects = () => {
                       item.link.startsWith("https://")
                         ? item.link
                         : `http://${item.link}`;
-                    window.open(link, "_self");
+                    window.open(link, "_blank");
                   }}
                 >
                   {item.name}
